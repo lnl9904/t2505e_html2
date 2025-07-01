@@ -1,0 +1,81 @@
+/* RESET */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;line-height:1.5;color:#222;background:#fff}
+a{color:#0066cc;text-decoration:none}
+ul{margin-left:1.25rem}
+
+/* Top right note */
+.top-note{
+  position:fixed;
+  top:6px;right:12px;
+  font-size:0.7rem;
+  color:#c00
+}
+
+/* Main container */
+.cv{
+  max-width:800px;
+  margin:40px auto;
+  padding:0 20px 40px
+}
+
+/* Header */
+header{text-align: center;}
+header h1{font-size:2rem;font-weight:700;color:#c00;margin-bottom:4px;text-transform:uppercase}
+header h2{font-size:1rem;font-weight:600;letter-spacing:0.5px;margin-bottom:8px}
+.contact li{list-style:none;font-size:0.9rem}
+
+/* Section titles */
+section{margin-top:28px}
+section h3{
+  font-size:1rem;
+  font-weight:700;
+  margin-bottom:6px;
+  text-transform:uppercase;
+  color:#c00
+}
+
+/* Job blocks */
+.job {
+  margin-bottom: 16px;
+}
+
+.job-head {
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.job-head .company {
+  margin-right: 4px;
+}
+
+.job-head .date {
+  color: #555;
+  margin-left: 4px;
+}
+
+.position {
+  font-weight: 400px;
+  margin-top: 4px;
+}
+
+
+/* Project box */
+.project{
+  background:#f0f0f0;
+  padding:8px;
+  margin-top:8px;
+  font-size:0.9rem
+}
+
+/* Bullet list */
+.bullet li{margin-bottom:4px}
+
+/* Responsive tweak */
+@media (max-width:600px){
+  .job-head{flex-direction:column}
+  .top-note{display:none}
+}
