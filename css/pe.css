@@ -164,8 +164,9 @@ body {
 .footer-content {
   display: flex;
   align-items: left;
-  justify-content: center;
+  justify-content: left;
   gap: 10px;
+  text-align: left;
 }
 
 .film-icon {
