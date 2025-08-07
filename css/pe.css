@@ -1,0 +1,179 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Header styling */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  color: white;
+  padding: 15px 30px;
+}
+
+.logo span {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+.nav-links a {
+  color: cyan; /* Changed from white to navy */
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: #001f4d; /* Slightly darker navy on hover */
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+}
+
+.search-bar button {
+  padding: 6px 10px;
+  border: none;
+  background-color: #555;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #777;
+}
+
+/* Layout container */
+.container {
+  display: flex;
+  padding: 20px;
+}
+.sidebar {
+  width: 220px;
+  background-color: #fff;
+  padding: 20px;
+  border-right: 2px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.sidebar h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: navy;
+  border-bottom: 2px solid navy;
+  padding-bottom: 5px;
+}
+
+.genre-list label {
+  display: block;
+  margin: 12px 0;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.genre-list input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: navy; /* Modern browsers support this */
+}
+
+/* Main content area */
+.main {
+  flex: 1;
+  padding: 0 30px;
+}
+
+/* Video section */
+.video {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Description styling */
+.description {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  line-height: 1.6;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.description h2 {
+  margin-top: 0;
+  font-size: 22px;
+  color: #333;
+}
+
+.description p {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+/* Movie list styling */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.movie {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.movie img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.stars {
+  color: gold;
+  font-size: 16px;
+}
+.site-footer {
+  background-color: #fff;
+  color: #fff;
+  padding: 20px 30px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  gap: 10px;
+}
+
+.film-icon {
+  font-size: 24px;
+}
+
+.brand-name {
+  font-size: 18px;
+  color: #00aaff; /* Blue tone */
+  font-weight: bold;
+}
