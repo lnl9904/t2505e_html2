@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời tiết</title>
+    <link rel="stylesheet" href="css/layout2.css">
+</head>
+
+<body>
+    <div class="weather-container">
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Nhập tên thành phố...">
+            <button onclick="fetchWeather()">Tìm kiếm</button>
+        </div>
+        <div class="weather-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/11166/11166783.png" alt="Partly Cloudy">
+        </div>
+        <div class="weather-info">
+            <h2>33°C</h2>
+            <p>☀️ Mây nhẹ</p>
+            <p>🌧️ Mưa: 0%</p>
+            <p>💧 Độ ẩm: 65%</p>
+            <p>🌬️ Gió: 13 km/h</p>
+        </div>
+    </div>
+    <script>
+        function fetchWeather() {
+            const city = document.getElementById("cityInput").value || "hanoi"; // Nếu không nhập, mặc định là Hà Nội
+
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
+
+            fetch(apiUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("Không tìm thấy thành phố");
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const temperature = Math.round(data.main.temp);
+                    const description = data.weather[0].description;
+                    const humidity = data.main.humidity;
+                    const windSpeed = data.wind.speed;
+                    const iconCode = data.weather[0].icon;
+
+                    document.querySelector(".weather-info h2").textContent = `${temperature}°C`;
+                    document.querySelector(".weather-info p:nth-child(2)").textContent = `🌤 ${description}`;
+                    document.querySelector(".weather-info p:nth-child(3)").textContent = `💧 Độ ẩm: ${humidity}%`;
+                    document.querySelector(".weather-info p:nth-child(4)").textContent = `🌬️ Gió: ${windSpeed} km/h`;
+                    document.querySelector(".weather-icon img").src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+                })
+                .catch(error => alert(error.message));
+        }
+    </script>
+</body>
+
+</html>
