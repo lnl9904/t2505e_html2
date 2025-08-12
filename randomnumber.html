@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script type="text/javascript" src="js/random.js">
+        // LUCKY NUMBER
+
+// Tạo số ngẫu nhiên từ 0 đến 99
+const luckyNumber = Math.floor(Math.random() * 100);
+
+// Nhập số dự đoán từ người chơi
+const guess = parseInt(prompt("Nhập số bạn dự đoán (0 - 99):"));
+
+// Nhập số tiền đầu tư
+const investment = parseFloat(prompt("Nhập số tiền bạn muốn đầu tư:"));
+
+// Kiểm tra kết quả
+if (guess === luckyNumber) {
+  const profit = investment * 70;
+  alert(`🎉 Chúc mừng! Bạn đã đoán đúng số may mắn (${luckyNumber})!\nLợi nhuận của bạn là: ${profit.toLocaleString()} VND`);
+} else {
+  alert(`😢 Rất tiếc! Số may mắn là ${luckyNumber}.\nBạn đã mất ${investment.toLocaleString()} VND`);
+}
+
+    </script>
+</body>
+</html>
